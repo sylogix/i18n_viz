@@ -23,7 +23,7 @@ module I18nViz
     end
 
     def display_i18n_viz?
-      I18nViz.enabled? && params && params[:i18n_viz]  rescue false  # rescue workaround, because params is weirdly defined in e.g. ActionMailer 
+      I18nViz.enabled? && params && params[:i18n_viz] == 'true' rescue false  # rescue workaround, because params is weirdly defined in e.g. ActionMailer 
     end
 
   end
